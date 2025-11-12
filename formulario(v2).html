@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="medidas(v2).css">
+    </head>
+    <body>
+        <header class="header-principal">
+            <div class="titulo-principal">Registro</div>
+        </header>
+        <nav class="nav-principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Registro</a></li>
+                <li><a href="">Caja 4</a></li>
+                <li><a href="">Caja 5</a></li>
+                <li class="causas">
+                    <a href="causas.html">Otros tipos de causas</a>
+                    <ul class="caja-causas">
+                        <li><a href="causas.html#mecanismos">Mecanismos de adaptación de las plantas</a></li>
+                        <li><a href="causas.html#ayuda">¿Qué podemos hacer para ayudar a las plantas?</a></li>
+                        <li><a href="causas.html#afecta">Cómo afecta a las plantas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="contenedor-principal">
+            <div class="caja-columnas-principal">
+                <h2 class="titulo-seccion">Formulario</h2>
+                <div class="sidebar-izquierda">
+                    <div class="caja-lateral">
+                        <h3 class="titulo-lateral">Imagen</h3>
+                        <img src="imagenes/jardineria.png" alt="Imagen representativa">
+                        <p class="texto-lateral"> 
+                            <br>
+                            Este es un texto largo para el ejemplo.
+                            Este es un texto largo para el ejemplo.
+                            Este es un texto largo para el ejemplo.
+                            Este es un texto largo para el ejemplo.
+                        </p>
+                        <a href="#" class="enlace-lateral">enlace de ejemplo</a>
+                    </div>
+                </div>
+
+                <div class="formulario-derecha">
+                    <p class="explicacion">Explicación: Este formulario recopila información sobre tus prácticas de jardinería.</p>
+                    <form action="recoger.php" method="post">
+                        <fieldset>
+                            <legend>Sección 1: Información básica</legend>
+                            <label for="nombre">Texto: Nombre (opcional):</label>
+                            <input type="text" id="nombre" name="nombre">
+
+                            <label for="email"><br>Texto: Correo electrónico (opcional):</label>
+                            <input type="email" id="email" name="email">
+
+                            <label for="ubicacion"><br>Ubicación (país/región):</label>
+                            <select id="ubicacion" name="ubicacion">
+                                <option value="">Seleccione...</option>
+                                <option value="España">España</option>
+                                <option value="México">México</option>
+                                </select>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Sección 2: Prácticas de cuidado de plantas</legend>
+                            <label>¿Qué tipo de plantas cultivas?</label><br>
+                            <input type="checkbox" id="nativas" name="plantas[]" value="Plantas nativas">
+                            <label for="nativas">Plantas nativas</label><br>
+                            <input type="checkbox" id="alimentos" name="plantas[]" value="Cultivos de alimentos">
+                            <label for="alimentos">Cultivos de alimentos</label><br><br>
+                            
+                            <label>¿Usas fertilizantes?</label><br>
+                            <input type="radio" id="compost" name="fertilizante" value="Sí, compost o abono orgánico">
+                            <label for="compost">Sí, compost o abono orgánico</label><br>
+                            <input type="radio" id="nofertilizante" name="fertilizante" value="No uso">
+                            <label for="nofertilizante">No uso</label><br><br>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Sección 3: Acepta los términos y condiciones</legend>
+                            <input type="checkbox" id="acepta" name="acepta" value="si" required>
+                            <label for="acepta">Aceptar términos y condiciones</label><br><br>
+                        </fieldset>
+                        
+                        <input type="submit" value="Enviar" class="boton-enviar-ancho-entero">
+                    </form>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer-privacidad">
+            Política de privacidad de la página web
+        </footer>
+    </body>
+</html>

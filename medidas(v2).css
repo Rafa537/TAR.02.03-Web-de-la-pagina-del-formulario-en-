@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0; 
+    background-color: #2b3a2c;
+    color: #333333;
+    /* El ancho máximo de 100% = 1200px */
+    max-width: 100%; 
+}
+
+/* El contenedor principal debe tener el fondo que abarque todo el contenido central */
+.contenedor-principal {
+    background-color: #a7c957;
+    width: 96.67%; /* Cálculo: (1160px width / 1200px contexto) * 100 = 96.67% */ 
+    padding: 20px 1.67%; /* Padding Horizontal: (20px / 1200px) * 100 = 1.666...% */
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+
+/* --- Cabecera y Título --- */
+.header-principal {
+    background-color: #cfe18f;
+    color: #386641;
+    /* Padding: (30px / 1200px) * 100 = 2.5% */
+    padding: 2.5% 0; /* Cálculo: (30px padding / 1200px contexto) * 100 = 2.5% padding */
+    text-align: center;
+    border-bottom: 3px solid #6a994e;
+}
+
+/* --- Menú de Navegación --- */
+.menu {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    /* Padding Vertical: Se mantiene en px */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    /* Margen Horizontal: (5px / 1200px) * 100 = 0.416...% */
+    margin: 0 0.42%; /* Cálculo: (5px margin / 1200px contexto) * 100 = 0.42% */
+    padding-bottom: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    /* Padding Horizontal: (15px / 1200px) * 100 = 1.25% */
+    padding: 10px 1.25%; /* Cálculo: (15px padding / 1200px contexto) * 100 = 1.25% */
+    display: block;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* --- Submenú Desplegable --- */
+.caja-causas {
+    display: none;
+    position: absolute;
+    background-color: #386641;
+    /* Width: (350px / 1200px) * 100 = 29.166...% */
+    width: 29.17%; /* Cálculo: (350px width / 1200px contexto) * 100 = 29.17% */
+    z-index: 100;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    /* Left: (-120px / 1200px) * 100 = -10% */
+    left: -10%; /* Cálculo: (-120px left / 1200px contexto) * 100 = -10% */
+}
+
+/* --- Títulos --- */
+.titulo-seccion {
+    text-align: center;
+    color: #386641;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+
+/* 1. Columna Izquierda (Aside) */
+.sidebar-izquierda {
+    float: left;
+    width: 25%;
+    /* Padding Horizontal: (10px / (1200px * 0.25)) * 100 = (10px / 300px) * 100 = 3.33% */
+    padding: 10px 3.33%; /* Cálculo: (10px padding / 300px contexto interno) * 100 = 3.33% */
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #cfe18f;
+    min-height: 500px;
+    border-right: 2px solid #6a994e;
+    border: none;
+}
+
+.caja-lateral {
+    /* Padding Horizontal: (10px / (1200px * 0.25)) * 100 = 3.33% */
+    padding: 10px 3.33%; /* Cálculo: (10px padding / 300px contexto interno) * 100 = 3.33% */
+    border: 1px solid #6a994e;
+}
+
+.caja-lateral img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    margin-bottom: 10px;
+}
+
+/* 2. Columna Derecha (Formulario) */
+.formulario-derecha {
+    float: right;
+    width: 75%;
+    /* Padding Horizontal: (10px / (1200px * 0.75)) * 100 = (10px / 900px) * 100 = 1.11% */
+    padding: 10px 1.11%; /* Cálculo: (10px padding / 900px contexto interno) * 100 = 1.11% */
+    box-sizing: border-box;
+    border: none;
+}
+
+/* --- Estilos del Formulario --- */
+form {
+    margin: 0px; 
+    /* Padding Horizontal: (20px / (1200px * 0.75)) * 100 = (20px / 900px) * 100 = 2.22% */
+    padding: 20px 2.22%; /* Cálculo: (20px padding / 900px contexto interno) * 100 = 2.22% */
+    border: 2px solid black;
+    background-color: rgb(36, 237, 83); 
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box; 
+    font-weight: bold;
+    border-color: rgb(22, 19, 24); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+/* Estilo para los campos de texto y selección */
+form input[type="text"],
+form input[type="email"],
+form select {
+    /* Width: 90% es relativo al ancho interno del formulario */
+    width: 90%; 
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: blue;
+}
+
+/* Estilo para el botón Enviar (ancho entero) */
+.boton-enviar-ancho-entero {
+    /* El 100% de width es relativo al ancho interno del formulario */
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* --- Pie de Página --- */
+.footer-privacidad {
+    background-color: #386641;
+    color: white;
+    text-align: center;
+    padding: 15px 1.25%; /* Cálculo del padding (20px padding / 1200px) * 100 = 1.25% */
+    font-size: 14px;
+    /* El 100% es relativo al body */
+    width: 100%; 
+    box-sizing: border-box;
+}
